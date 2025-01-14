@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 1rem 0;
+            text-align: center;
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 15px;
+            padding: 20px;
+        }
+        .gallery img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+        }
+        .lightbox img {
+            max-width: 90%;
+            max-height: 90%;
+        }
+        .lightbox:target {
+            display: flex;
+        }
+        footer {
+            text-align: center;
+            padding: 1rem 0;
+            background-color: #333;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>My Gallery</h1>
+    </header>
+
+    <div class="gallery">
+        <a href="#img1"><img src="https://via.placeholder.com/300" alt="Image 1"></a>
+        <a href="#img2"><img src="https://via.placeholder.com/300" alt="Image 2"></a>
+        <a href="#img3"><img src="https://via.placeholder.com/300" alt="Image 3"></a>
+        <a href="#img4"><img src="https://via.placeholder.com/300" alt="Image 4"></a>
+    </div>
+
+    <!-- Lightbox -->
+    <div id="img1" class="lightbox">
+        <img src="https://via.placeholder.com/300" alt="Image 1">
+    </div>
+    <div id="img2" class="lightbox">
+        <img src="https://via.placeholder.com/300" alt="Image 2">
+    </div>
+    <div id="img3" class="lightbox">
+        <img src="https://via.placeholder.com/300" alt="Image 3">
+    </div>
+    <div id="img4" class="lightbox">
+        <img src="https://via.placeholder.com/300" alt="Image 4">
+    </div>
+
+    <footer>
+        <p>&copy; 2025 My Gallery. All rights reserved.</p>
+    </footer>
+</body>
+</html>
